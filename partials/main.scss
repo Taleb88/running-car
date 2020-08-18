@@ -1,0 +1,48 @@
+body {
+    position: fixed;
+    top: 30rem;
+    left: 30rem;
+    background-image: url('../images/main.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: -2rem;
+    animation: slide 60s infinite;
+
+    @keyframes slide {
+        0% {
+            transform: translate3d(0,0,0)
+        } 
+        100% {
+            transform: translate3d(15rem,0,0);
+        }
+    }
+
+    .movingcar {
+        background-image: url('../images/car.png');
+        background-repeat: no-repeat;
+        width: 100vw;
+        height: 100vh;
+        padding-top: 4rem;
+
+        &__wheelone {
+            width: 5vw;
+            animation: rotation 2s infinite linear;
+            margin-left: 2.5rem;
+        }
+
+        &__wheeltwo {
+            width: 5vw;
+            animation: rotation 2s infinite linear;
+            margin-left: 5.1rem;
+        }
+
+        @keyframes rotation {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg)
+            }
+        }
+    }
+}
